@@ -12,4 +12,4 @@ Requirements:
 
 This code has only been tested on a 2011 Chevy Equinox.
 
-#Use at your own risk. I take no responsibility should your account be terminated.
+# Use at your own risk. I take no responsibility should your account be terminated.
