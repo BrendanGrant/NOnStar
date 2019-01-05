@@ -16,8 +16,8 @@ namespace NOnStar
 {
     public class OnStarClient
     {
-        static string ClientId = "OMB_CVY_AND_3D0";
-        static string JwtSecretKey = "TAEJztOzgCYl4RyOtNvJ";
+        static string ClientId = "OMB_CVY_AND_3F1";
+        static string JwtSecretKey = "ZYvGs3YCGrWn7DAd4Eho";
         static string DeviceId = "bf479a40-1f6a-4677-a6de-88b45a46fbae"; //Make up your own GUID
         string username;
         string password;
