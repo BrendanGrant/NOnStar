@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="JWT" Version="4.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
 </Project>
