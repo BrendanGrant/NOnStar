@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using NOnStar.CommandAndControl;
+using Newtonsoft.Json;
 
 namespace NOnStar
 {
@@ -213,6 +214,13 @@ namespace NOnStar
 
             var pinUpgradeResult = await client.PostAsync("https://api.gm.com/api/v1/oauth/token/upgrade", new StringContent(pinToken));
             var pinUpgradeResultStr = await pinUpgradeResult.Content.ReadAsStringAsync();
+
+            if (pinUpgradeResultStr != string.Empty)
+            {
+                var errorMessage = JsonConvert.DeserializeObject<UpgradeError>(pinUpgradeResultStr);
+
+                throw new InvalidOperationException($"{errorMessage.Error} - {errorMessage.Description}");
+            }
         }
 
         private async Task<CommandRequestStatus> Login( DeviceAuth authObject)
